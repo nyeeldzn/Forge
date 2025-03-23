@@ -1,77 +1,76 @@
 # Forge - No-Code Application Development in Pascal
 
-**Forge** é uma aplicação no-code para desenvolvimento de formulários e aplicativos, criada em Pascal, idealizada inicialmente como um projeto de estudos de linguagem. Desenvolvida no **Lazarus / Free Pascal**, a aplicação visa facilitar a criação de interfaces gráficas sem a necessidade de codificação manual. Futuramente, o projeto será compatível também com **Delphi**.
+**Forge** is a no-code application for developing forms and applications, created in Pascal, initially designed as a language study project. Developed in **Lazarus / Free Pascal**, the application aims to simplify the creation of graphical interfaces without the need for manual coding. In the future, the project will also be compatible with **Delphi**.
 
+## 🔧 Upcoming Development Steps
 
-## 🔧 Próximos Passos de Desenvolvimento
+Here are the main goals and improvements planned for the future of Forge:
 
-Aqui estão os principais objetivos e melhorias previstas para o futuro do Forge:
+### 🔨 Adjustments in RuntimeForm
+- Improvements in the management of **Events in RuntimeForm** to produce more robust applications.
 
-### 🔨 Ajustes no RuntimeForm
-- Melhorias no gerenciamento de **Eventos no RuntimeForm** para a produção de aplicações mais robustas.
+### 🧩 Component Board Adjustment
+- Implementation of a **scrollview** in the component board, allowing the creation of windows larger than the available space in the IDE interface.
 
-### 🧩 Ajuste do Board de Componentes
-- Implementação de **scrollview** no board de componentes, permitindo que você crie janelas maiores que o tamanho disponível na interface da IDE.
+### ⚙️ New Types of Events
+- Addition of **new types of events**:
+  - **Binding 1 or more events**.
+  - **Customizable events**, which can be defined with **pseudocode** or **custom scripts**.
 
-### ⚙️ Novos Tipos de Eventos
-- Adição de **novos tipos de eventos**:
-  - **Vinculação de 1 ou mais eventos**.
-  - **Eventos customizáveis**, que poderão ser definidos com **pseudocódigo** ou **scripts próprios**.
+### 🎨 New Components in the Palette
+- Inclusion of new components in the tool palette for creating more dynamic interfaces.
 
-### 🎨 Novos Componentes na Paleta
-- Inclusão de novos componentes na paleta de ferramentas para a criação de interfaces mais dinâmicas.
+### 🖥️ Editing Multiple Forms Simultaneously
+- Feature to allow **editing multiple forms simultaneously**, making it easier to develop complex projects.
 
-### 🖥️ Edição de Vários Forms Simultaneamente
-- Funcionalidade para permitir **edição de múltiplos formulários simultaneamente**, facilitando o desenvolvimento de projetos complexos.
+### 📂 Project File
+- Creation of a project file that supports the design of **multi-screen applications**.
 
-### 📂 Arquivo de Projeto
-- Criação de um arquivo de projeto que suporte a concepção de **aplicações multi-telas**.
+### 📊 Inclusion of Dataset Components and Connectors
+- Implementation of **dataset components** to work with databases.
+- Addition of **HTTP and standard SQL connectors** for external data integration.
 
-### 📊 Inclusão de Componentes de Dataset e Conectores
-- Implementação de **componentes de dataset** para trabalhar com bancos de dados.
-- Adição de **conectores HTTP e SQL padrão** para integração de dados externos.
+### 🏗️ Build as a Single EXE
+- Development of a feature to perform **builds into a single executable** (`.exe`), simplifying the distribution of the project.
 
-### 🏗️ Build em EXE Único
-- Criação de uma funcionalidade para realizar o **build de executáveis únicos** (`.exe`), simplificando a distribuição do projeto.
+## 🚀 Installing Lazarus
 
-## 🚀 Instalação do Lazarus
+### Step 1: Download Lazarus
+1. Go to the official Lazarus website: [Lazarus IDE](https://www.lazarus-ide.org/).
+2. Download the appropriate version for your operating system.
 
-### Passo 1: Baixar o Lazarus
-1. Acesse o site oficial do Lazarus: [Lazarus IDE](https://www.lazarus-ide.org/).
-2. Faça o download adequado para o seu sistema operacional.
+### Step 2: Install Lazarus
+- Follow the installation instructions for your operating system.
 
-### Passo 2: Instalar o Lazarus
-- Siga as instruções de instalação de acordo com o sistema operacional em que você está.
+## 🧑‍💻 Cloning the Repository
 
-## 🧑‍💻 Clonando o Repositório
-
-### Passo 1: Clone o repositório
-Após instalar o Lazarus, abra o terminal ou prompt de comando e execute o seguinte comando para clonar o repositório:
+### Step 1: Clone the repository
+After installing Lazarus, open the terminal or command prompt and run the following command to clone the repository:
 
 ```bash
-git clone https://github.com/seu-usuario/Forge.git
+git clone https://github.com/your-username/Forge.git
 ```
 
-### Passo 2: Abra o projeto no Lazarus
-1. Após clonar o repositório, abra o Lazarus.
-2. No Lazarus, clique em **File > Open...** e selecione o arquivo `.lpi` do projeto Forge que foi clonado.
-3. O projeto será carregado e você poderá começar a editar.
+### Step 2: Open the project in Lazarus
+1. After cloning the repository, open Lazarus.
+2. In Lazarus, click **File > Open...** and select the `.lpi` file of the Forge project you cloned.
+3. The project will be loaded, and you can start editing.
 
-## 💡 Contribuindo
+## 💡 Contributing
 
-Se você deseja contribuir para o Forge, fique à vontade para abrir issues ou pull requests. Estamos sempre em busca de melhorias!
+If you'd like to contribute to Forge, feel free to open issues or pull requests. We're always looking for improvements!
 
-### Passos para Contribuir:
-1. Fork o repositório.
-2. Crie uma branch para a nova funcionalidade ou correção de bug (`git checkout -b feature/nome-da-funcionalidade`).
-3. Faça suas modificações e commite-as (`git commit -am 'Adicionando nova funcionalidade'`).
-4. Envie para o repositório (`git push origin feature/nome-da-funcionalidade`).
-5. Abra um Pull Request explicando as mudanças.
+### Steps to Contribute:
+1. Fork the repository.
+2. Create a branch for your new feature or bug fix (`git checkout -b feature/your-feature-name`).
+3. Make your changes and commit them (`git commit -am 'Adding new feature'`).
+4. Push to the repository (`git push origin feature/your-feature-name`).
+5. Open a Pull Request explaining your changes.
 
-## 📜 Licença
+## 📜 License
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-🚀 **Forge** - Desenvolva sem limitações! 🎉
+🚀 **Forge** - Develop without limitations! 🎉
