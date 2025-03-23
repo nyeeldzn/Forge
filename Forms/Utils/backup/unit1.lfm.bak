@@ -1,0 +1,33 @@
+object Form2: TForm2
+  Left = 322
+  Height = 731
+  Top = 250
+  Width = 181
+  Caption = 'Form2'
+  ClientHeight = 731
+  ClientWidth = 181
+  object SpeedButton1: TSpeedButton
+    Left = 0
+    Height = 40
+    Top = 0
+    Width = 181
+    Align = alTop
+    Caption = 'Botão'
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 0
+    Height = 40
+    Top = 80
+    Width = 181
+    Align = alTop
+    Caption = 'Campo de Texto'
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 0
+    Height = 40
+    Top = 40
+    Width = 181
+    Align = alTop
+    Caption = 'Texto'
+  end
+end

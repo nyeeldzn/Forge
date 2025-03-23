@@ -1,0 +1,45 @@
+object NewComponentPopUp: TNewComponentPopUp
+  Left = 430
+  Height = 130
+  Top = 250
+  Width = 320
+  BorderStyle = bsNone
+  Caption = 'NewComponentPopUp'
+  ClientHeight = 130
+  ClientWidth = 320
+  OnCloseQuery = FormCloseQuery
+  object edNome: TLabeledEdit
+    Left = 8
+    Height = 21
+    Top = 21
+    Width = 304
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 16
+    EditLabel.Width = 304
+    EditLabel.Caption = 'Nome Interno'
+    TabOrder = 0
+    OnKeyDown = edNomeKeyDown
+  end
+  object Button1: TButton
+    Left = 237
+    Height = 25
+    Top = 100
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Salvar'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object edDescricao: TLabeledEdit
+    Left = 8
+    Height = 21
+    Top = 72
+    Width = 304
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 16
+    EditLabel.Width = 304
+    EditLabel.Caption = 'Descrição Componente'
+    TabOrder = 1
+    OnKeyDown = edNomeKeyDown
+  end
+end

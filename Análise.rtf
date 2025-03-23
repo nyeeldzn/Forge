@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 An\'e1lise da Biblioteca de Componentes No-Code\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf0 Objetivo\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Criar uma biblioteca de componentes para permitir a constru\'e7\'e3o de telas din\'e2micas, onde usu\'e1rios possam configurar formul\'e1rios e fluxos de intera\'e7\'e3o sem precisar de programa\'e7\'e3o manual.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Estrutura da Biblioteca\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 A biblioteca ser\'e1 baseada em uma hierarquia de componentes e interfaces para garantir flexibilidade e reusabilidade.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 1. Interface Base (
+\f2\fs30\fsmilli15210 IComponentBase
+\f0\fs28 )\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Todos os componentes devem implementar essa interface base para garantir um conjunto m\'ednimo de funcionalidades comuns.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 IComponentBase = interface\
+  function GetName: string;\
+  procedure SetName(const AName: string);\
+  function GetParent: IComponentBase;\
+  procedure SetParent(AParent: IComponentBase);\
+  function GetProperties: TDictionary<string, Variant>;\
+  procedure SetProperties(AProperties: TDictionary<string, Variant>);\
+end;\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 2. Componentes de Entrada (
+\f2\fs30\fsmilli15210 IInputComponent
+\f0\fs28 )\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Interface para componentes que recebem entrada do usu\'e1rio, como TEdit, TComboBox, etc.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 IInputComponent = interface(IComponentBase)\
+  function GetValue: Variant;\
+  procedure SetValue(AValue: Variant);\
+end;\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 3. Componentes de Apresenta\'e7\'e3o (
+\f2\fs30\fsmilli15210 IDisplayComponent
+\f0\fs28 )\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Interface para componentes que apenas exibem informa\'e7\'f5es, como TLabel, TImage, etc.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 IDisplayComponent = interface(IComponentBase)\
+  procedure SetText(AText: string);\
+  function GetText: string;\
+end;\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 4. Componentes de A\'e7\'e3o (
+\f2\fs30\fsmilli15210 IActionComponent
+\f0\fs28 )\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Interface para bot\'f5es e outros componentes que disparam eventos.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 IActionComponent = interface(IComponentBase)\
+  procedure SetOnClick(AEvent: TNotifyEvent);\
+end;\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 5. Sistema de Triggers e A\'e7\'f5es\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Cada componente pode ser vinculado a eventos que disparam a\'e7\'f5es espec\'edficas.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Exemplo de A\'e7\'f5es:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 AdicionarAlgoA
+\f1\fs24 : Adiciona um valor a um componente de lista.\
+\ls1\ilvl0
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 RemoverAlgoDe
+\f1\fs24 : Remove um valor de um componente.\
+\ls1\ilvl0
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 AtualizarAlgoDe
+\f1\fs24 : Atualiza um valor exibido em um componente.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Exemplo de Configura\'e7\'e3o:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 \{\
+  "Componente": "BotaoConfirmar",\
+  "Tipo": "Button",\
+  "Acao": \{\
+    "Tipo": "AtualizarAlgoDe",\
+    "Origem": "EditNome",\
+    "Destino": "LabelNome"\
+  \}\
+\}\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 6. Fluxo de Execu\'e7\'e3o\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 O usu\'e1rio configura os componentes e suas rela\'e7\'f5es no modo DesignTime.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 As configura\'e7\'f5es s\'e3o salvas em JSON.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 No modo RunTime, a tela \'e9 reconstru\'edda dinamicamente com base na configura\'e7\'e3o.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Os eventos de a\'e7\'e3o s\'e3o executados conforme os gatilhos definidos.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Conclus\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Essa abordagem permite um alto n\'edvel de personaliza\'e7\'e3o sem necessidade de c\'f3digo, tornando a ferramenta flex\'edvel para diferentes cen\'e1rios de uso. Se precisar de ajustes ou expans\'e3o, podemos discutir novas funcionalidades! \uc0\u55357 \u56960 \
+}

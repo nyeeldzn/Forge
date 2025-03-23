@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <AutoCreateForms Value="False"/>
+      <Title Value="Forge"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item>
+      <Item>
+        <PackageName Value="AnchorDocking"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="Forge.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/designtimeform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DesignTimeForm"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Utils/PopUpUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/Form.Utils.NewComponentPopUp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NewComponentPopUp"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/Form.Utils.PalleteTools.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PalleteTools"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.componentsboard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ComponentsBoard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="Form.Utils.ComponentsBoard"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.componentfactory.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.ComponentFactory"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.toolbar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ToolBarFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="Form.Utils.ToolBar"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Utils/fileutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FileUtils"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.componentfactory.interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.ComponentFactory.Interfaces"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.componentfactory.components.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.ComponentFactory.Components"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Utils/componentutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ComponentUtils"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.components.resizehandle.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.Components.ResizeHandle"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.components.resizeframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.Components.ResizeFrame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.componentproperties.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ComponentProperties"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="Form.Utils.ComponentProperties"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Utils/arrayutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ArrayUtils"/>
+      </Unit>
+      <Unit>
+        <Filename Value="constants/constants.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constants"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.component.events.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.Component.Events"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.eventmanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.EventManager"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.eventeditform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.EventEditForm"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Utils/jsonutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="JSONUtils"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Forms/Utils/form.utils.runtimeform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Form.Utils.RuntimeForm"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="Forge"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="Forms;Forms/Utils;Utils;constants"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

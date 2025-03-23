@@ -1,0 +1,9 @@
+object ComponentsBoard: TComponentsBoard
+  Left = 0
+  Height = 666
+  Top = 0
+  Width = 904
+  TabOrder = 0
+  DesignLeft = 388
+  DesignTop = 25
+end

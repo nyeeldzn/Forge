@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid301\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid401\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 An\'e1lise do Salvamento e Interpreta\'e7\'e3o do JSON da Estrutura da Tela\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf0 Objetivo\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Definir como a estrutura da tela e as a\'e7\'f5es ser\'e3o armazenadas em JSON, como essa informa\'e7\'e3o ser\'e1 interpretada e como os componentes ser\'e3o vinculados \'e0s respectivas a\'e7\'f5es no runtime.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Estrutura do JSON\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 O JSON conter\'e1 a defini\'e7\'e3o dos componentes, suas propriedades e as a\'e7\'f5es associadas.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 1. Defini\'e7\'e3o dos Componentes\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Cada componente \'e9 descrito em um formato padronizado contendo:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ID
+\f1\fs24 : Identificador \'fanico do componente.\
+\ls1\ilvl0
+\f2\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tipo
+\f1\fs24 : Tipo do componente (exemplo: "Edit", "Label", "Button").\
+\ls1\ilvl0
+\f2\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Propriedades
+\f1\fs24 : Configura\'e7\'f5es espec\'edficas do componente (exemplo: caption, valor padr\'e3o, tamanho).\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 Exemplo de JSON:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \{\
+  "Componentes": [\
+    \{\
+      "ID": "EditNome",\
+      "Tipo": "Edit",\
+      "Propriedades": \{\
+        "Valor": "",\
+        "Largura": 200\
+      \}\
+    \},\
+    \{\
+      "ID": "LabelNome",\
+      "Tipo": "Label",\
+      "Propriedades": \{\
+        "Texto": ""\
+      \}\
+    \},\
+    \{\
+      "ID": "BotaoConfirmar",\
+      "Tipo": "Button",\
+      "Propriedades": \{\
+        "Caption": "Confirmar"\
+      \}\
+    \}\
+  ]\
+\}\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 2. Defini\'e7\'e3o das A\'e7\'f5es\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 As a\'e7\'f5es descrevem eventos que ocorrem quando um componente \'e9 interagido.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tipo
+\f1\fs24 : Tipo da a\'e7\'e3o a ser executada.\
+\ls2\ilvl0
+\f2\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Origem
+\f1\fs24 : Componente que dispara a a\'e7\'e3o.\
+\ls2\ilvl0
+\f2\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Destino
+\f1\fs24 : Componente que receber\'e1 a altera\'e7\'e3o.\
+\ls2\ilvl0
+\f2\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Par\'e2metros
+\f1\fs24 : Informacoes adicionais para a a\'e7\'e3o.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 Exemplo de JSON para A\'e7\'f5es:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \{\
+  "Acoes": [\
+    \{\
+      "Tipo": "AtualizarAlgoDe",\
+      "Origem": "EditNome",\
+      "Destino": "LabelNome",\
+      "Par\'e2metros": \{\
+        "Campo": "Texto"\
+      \}\
+    \},\
+    \{\
+      "Tipo": "LimparAlgoDe",\
+      "Origem": "BotaoConfirmar",\
+      "Destino": "EditNome"\
+    \}\
+  ]\
+\}\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Processo de Salvamento\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 O salvamento da estrutura ocorrer\'e1 seguindo os seguintes passos:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Capturar a estrutura da tela e seus componentes.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Serializar os componentes e suas propriedades em formato JSON.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Capturar os eventos configurados pelos usu\'e1rios e associ\'e1-los aos componentes.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Salvar o JSON em um arquivo ou banco de dados para posterior uso.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Processo de Interpreta\'e7\'e3o e Constru\'e7\'e3o da Tela\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Para reconstruir a tela no runtime:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Carregamento do JSON:
+\f1\b0  O JSON salvo \'e9 lido e transformado em objetos equivalentes aos componentes.\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Cria\'e7\'e3o dos Componentes:
+\f1\b0  A estrutura de componentes \'e9 instanciada dinamicamente conforme descrita no JSON.\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Atribui\'e7\'e3o de Propriedades:
+\f1\b0  Cada componente recebe suas propriedades especificadas.\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Vincula\'e7\'e3o de Eventos:
+\f1\b0  As a\'e7\'f5es definidas no JSON s\'e3o interpretadas e associadas aos eventos dos componentes.\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Execu\'e7\'e3o das A\'e7\'f5es:
+\f1\b0  Quando uma intera\'e7\'e3o ocorre, o sistema executa a l\'f3gica definida para a a\'e7\'e3o correspondente.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Exemplo de Execu\'e7\'e3o\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Usu\'e1rio clica no 
+\f2\fs26 BotaoConfirmar
+\f1\fs24 .\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 A\'e7\'e3o vinculada ao bot\'e3o \'e9 acionada (
+\f2\fs26 AtualizarAlgoDe
+\f1\fs24 ).\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 O valor do 
+\f2\fs26 EditNome
+\f1\fs24  \'e9 copiado para o 
+\f2\fs26 LabelNome
+\f1\fs24 .\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Outra a\'e7\'e3o \'e9 executada (
+\f2\fs26 LimparAlgoDe
+\f1\fs24 ), limpando o 
+\f2\fs26 EditNome
+\f1\fs24 .\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Conclus\'e3o\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Esse sistema permite que telas din\'e2micas sejam criadas e manipuladas sem necessidade de c\'f3digo, apenas atrav\'e9s da configura\'e7\'e3o JSON. Isso facilita a personaliza\'e7\'e3o e expans\'e3o do sistema sem necessidade de recompila\'e7\'e3o do software.\
+}

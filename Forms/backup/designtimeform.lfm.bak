@@ -1,0 +1,77 @@
+object Form1: TForm1
+  Left = 229
+  Height = 716
+  Top = 1330
+  Width = 1225
+  Caption = 'Arquivo Não Salvo - Forge'
+  ClientHeight = 716
+  ClientWidth = 1225
+  OnCreate = FormCreate
+  OnDragOver = FormDragOver
+  object pnlPalleteTools: TPanel
+    Left = 0
+    Height = 679
+    Top = 37
+    Width = 180
+    Align = alLeft
+    ClientHeight = 679
+    ClientWidth = 180
+    TabOrder = 0
+    inline PalleteTools1: TPalleteTools
+      Left = 1
+      Height = 677
+      Top = 1
+      Width = 178
+      Align = alClient
+      ClientHeight = 677
+      ClientWidth = 178
+      inherited ScrollBox1: TScrollBox
+        Height = 677
+        Width = 178
+      end
+    end
+  end
+  object pnlComponentProperties: TPanel
+    Left = 925
+    Height = 679
+    Top = 37
+    Width = 300
+    Align = alRight
+    ClientHeight = 679
+    ClientWidth = 300
+    TabOrder = 1
+    Visible = False
+    object Splitter1: TSplitter
+      Left = 1
+      Height = 677
+      Top = 1
+      Width = 5
+    end
+  end
+  object ActionBar: TPanel
+    Left = 0
+    Height = 37
+    Top = 0
+    Width = 1225
+    Align = alTop
+    ClientHeight = 37
+    ClientWidth = 1225
+    TabOrder = 2
+    inline ToolBarFrame1: TToolBarFrame
+      Left = 1
+      Height = 35
+      Top = 1
+      Width = 1223
+      Align = alClient
+    end
+  end
+  inline DesignBoard: TComponentsBoard
+    Left = 180
+    Height = 679
+    Top = 37
+    Width = 745
+    Align = alClient
+    OnMouseDown = DesignBoardMouseDown
+    TabOrder = 3
+  end
+end
