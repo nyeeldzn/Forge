@@ -19,11 +19,15 @@ type
 
   TSpeedButton = class(Buttons.TSpeedButton, IActionComponent)
   private
+			function GetOnClick: TNotifyEvent;
     function GetProperties: TArray<string>;
+		procedure SetOnClick(AValue: TNotifyEvent);
     procedure SetProperties(AProperties: TArray<string>);
   public
     procedure ApplyProperties(AProperties: TStringList);
     function GetProperites(): TStringList;
+
+    property OnClick: TNotifyEvent read GetOnClick write SetOnClick;
   published
     property Properties: TArray<string> read GetProperties write SetProperties;
 	end;
@@ -68,10 +72,19 @@ implementation
 
 { TSpeedButton }
 
+function TSpeedButton.GetOnClick: TNotifyEvent;
+begin
+  Result := inherited OnClick;
+end;
 
 function TSpeedButton.GetProperties: TArray<string>;
 begin
   Result := ['Caption', 'Top', 'Left', 'Right', 'Bottom', 'Name'];
+end;
+
+procedure TSpeedButton.SetOnClick(AValue: TNotifyEvent);
+begin
+  inherited OnClick := AValue;
 end;
 
 procedure TSpeedButton.SetProperties(AProperties: TArray<string>);
@@ -194,6 +207,7 @@ begin
   Self.Width := StrToIntDef(AProperties.Values['Width'], 0);
   Self.Height := StrToIntDef(AProperties.Values['Height'], 0);
   Self.Caption:= AProperties.Values['Caption'];
+  Self.Text := AProperties.Values['Text'];
   Self.Name:= AProperties.Values['Name'];
 end;
 
@@ -206,6 +220,7 @@ begin
     Result.Values['Width'] := IntToStr(Self.Width);
     Result.Values['Height'] := IntToStr(Self.Height);
     Result.Values['Caption'] := Self.Caption;
+    Result.Values['Text'] := Self.Text;
     Result.Values['Name'] := Self.Name;
   except
     Result.Free;

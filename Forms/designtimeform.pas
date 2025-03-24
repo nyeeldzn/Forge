@@ -243,7 +243,7 @@ begin
 
   DesignBoard.OnComponentClick:= OnComponentClick;
 
-  FEventManager := TEventManager.Create;
+  FEventManager := TEventManager.Create(True);
 
   FEventManagerPanel:= TEventManagerPanel.Create(Self, DesignBoard);
   FEventManagerPanel.Parent := pnlComponentProperties;

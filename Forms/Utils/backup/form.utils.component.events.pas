@@ -6,6 +6,7 @@ interface
 
 uses
     Classes,
+    Controls,
     SysUtils,
     Generics.Collections,
     fpjson,
@@ -19,6 +20,7 @@ type
 
   TComponentEvent = class
     private
+      FDesignTime: boolean;
       FTriggerComponent: IActionComponent;
       FSourceComponent: IInputComponent;
       FTargetComponent: IDisplayComponent;
@@ -26,7 +28,7 @@ type
 			procedure SetSourceComponent(AValue: IInputComponent);
      procedure SetTriggerComponent(AValue: IActionComponent);
     public
-      constructor Create(AEventName: string);
+      constructor Create(AEventName: string; DesignTime: boolean = false );
 
       procedure Execute(ASender: TObject);
 
@@ -47,12 +49,13 @@ type
 
   TEventManager = class
   private
+    FDesignTime: boolean;
     FEventList: TObjectList<TComponentEvent>;
     FAfterInitialize: TOnAfterInitialize;
 		function GetEventCount: integer;
 
   public
-    constructor Create;
+    constructor Create(DesignTime: boolean = false);
     destructor Destroy; override;
     procedure AddEvent(AEvent: TComponentEvent);
     procedure RemoveEvent(AEvent: TComponentEvent);
@@ -114,11 +117,7 @@ begin
 
   if Assigned(FTriggerComponent) then
   begin
-    if FTriggerComponent is TSpeedButton then
-    begin
-      TSpeedButton(FTriggerComponent).OnClick := Execute;
-      TSpeedButton(FTriggerComponent).OnMouseDown := TexteExecute;
-		end;
+    FTriggerComponent.OnClick := Execute;
 	end;
 end;
 
@@ -130,9 +129,10 @@ begin
   FSourceComponent:=AValue;
 end;
 
-constructor TComponentEvent.Create(AEventName: string);
+constructor TComponentEvent.Create(AEventName: string; DesignTime: boolean);
 begin
   FEventName := AEventName;
+  FDesignTime:= DesignTime;
 end;
 
 procedure TComponentEvent.Execute(ASender: TObject);
@@ -141,7 +141,8 @@ var
 begin
   if
     Assigned(FSourceComponent) and
-    Assigned(FTargetComponent)
+    Assigned(FTargetComponent) and
+    (not FDesignTime)
   then
   begin
     if FTargetComponent is TLabel then
@@ -170,9 +171,10 @@ begin
   Result := FEventList.Count;
 end;
 
-constructor TEventManager.Create;
+constructor TEventManager.Create(DesignTime: boolean);
 begin
   FEventList := TObjectList<TComponentEvent>.Create(True);
+  FDesignTime := DesignTime;
 end;
 
 destructor TEventManager.Destroy;
@@ -223,7 +225,7 @@ begin
     begin
       EventJSON := JSONArray.Objects[i];
       EventString := EventJSON.AsJSON;
-      Event := TComponentEvent.Create(EventJSON.Get('EventName', ''));
+      Event := TComponentEvent.Create(EventJSON.Get('EventName', ''), FDesignTime);
       Event.FromJsonObject(EventJSON, AComponentHolder);
       FEventList.Add(Event);
     end;

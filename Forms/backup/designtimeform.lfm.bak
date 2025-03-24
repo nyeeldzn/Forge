@@ -3,7 +3,7 @@ object Form1: TForm1
   Height = 716
   Top = 1330
   Width = 1225
-  Caption = 'Arquivo Não Salvo - Forge'
+  Caption = 'Arquivo Não Salvo - Forge *'
   ClientHeight = 716
   ClientWidth = 1225
   OnCreate = FormCreate

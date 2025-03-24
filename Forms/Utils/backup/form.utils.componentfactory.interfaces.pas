@@ -51,7 +51,6 @@ type
     procedure ApplyProperties(AProperties: TStringList);
     function GetProperites(): TStringList;
 
-	  procedure SetOnClick(AEvent: TNotifyEvent);
 	end;
 
 implementation

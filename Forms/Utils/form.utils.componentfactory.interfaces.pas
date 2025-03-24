@@ -45,12 +45,18 @@ type
     property Text: string read GetText write SetText;
   end;
 
+	{ IActionComponent }
+
   IActionComponent = interface(IComponentBase)
     ['{B477F3E0-2A4C-424F-E9EE-AC5B0FF27B2E}']
 
     procedure ApplyProperties(AProperties: TStringList);
+		function GetOnClick: TNotifyEvent;
     function GetProperites(): TStringList;
+		procedure SetOnClick(AValue: TNotifyEvent);
 
+
+    property OnClick: TNotifyEvent read GetOnClick write SetOnClick;
 	end;
 
 implementation
